@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": "whql-amd-software-adrenalin-edition-25.3.1-win10-win11-march-rdna-combined.exe",
+    "url": "https://drivers.amd.com/drivers/whql-amd-software-adrenalin-edition-25.3.1-win10-win11-march-rdna-combined.exe",
+    "release_notes": "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-25-3-1.html",
+    "size": 1527561768,
+    "sha256": "37a92c73b2ac980ed48ddf50708d8e889986b2a75907e44414a71385d9bf4e37"
+  },
+  "hip_sdk": {
+    "name": "AMD-Software-PRO-Edition-23.Q4-Win10-Win11-For-HIP.exe",
+    "license_and_download": "https://www.amd.com/en/developer/resources/rocm-hub/eula/licenses.html?filename=AMD-Software-PRO-Edition-23.Q4-Win10-Win11-For-HIP.exe",
+    "size": 1259878656,
+    "sha256": "ec167eb267d3f331edd65ecfaedd292f407e7ea00163e7758a9c3c3711c1da77"
+  }
+}

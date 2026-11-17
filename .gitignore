@@ -1,0 +1,17 @@
+/.venv/
+/local/
+/logs/
+/downloads/
+/data/
+/build/
+*.part
+*.installing
+__pycache__/
+*.pyc
+/runtime/rocblas.dll
+/runtime/rocblas/
+*.gguf
+*.safetensors
+*.pack
+.env
+*.dmp

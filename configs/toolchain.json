@@ -1,0 +1,22 @@
+{
+  "version": "10.3.0a20261111",
+  "index": "https://nightly.repo.amd.com/rocm/whl-next/",
+  "wheels": {
+    "rocm_sdk_core-10.3.0a20261111-py3-none-win_amd64.whl": {
+      "size": 860065447,
+      "sha256": "1d0e8f99d1196737bca3ca72c71d000388e8aa9ca25d91beecefe75590a2c352"
+    },
+    "rocm_sdk_devel-10.3.0a20261111-py3-none-win_amd64.whl": {
+      "size": 235620987,
+      "sha256": "7a2da37a043429136fa4d51219ca5fe14169eaa1cba6910d5a8ad881e8a4ec5d"
+    },
+    "rocm_sdk_device_gfx906-10.3.0a20261111-py3-none-win_amd64.whl": {
+      "size": 407426169,
+      "sha256": "0b01f7cedd0b7368f295bd8377e465710b4d7ea06ba3d1072e606d838c3bfa37"
+    },
+    "rocm_sdk_libraries-10.3.0a20261111-py3-none-win_amd64.whl": {
+      "size": 139290687,
+      "sha256": "5c4256226cca7f425e9dbcfc9a34ac3053a569a11bb8e2725b1dfdc22c82c4e0"
+    }
+  }
+}

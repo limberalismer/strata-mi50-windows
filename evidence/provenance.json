@@ -1,0 +1,10 @@
+{
+  "engine_source": "Strata-mi50-int6 local snapshot (no .git metadata available)",
+  "production_python_source": "Strata-mi50 local snapshot",
+  "ggml_base": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "ggml_source": "exact local checkout used by build-906",
+  "local_source_sha256": "source-sha256.json",
+  "engine_sha256": "08d17dd1964a649f23da0e98c1891908364c4c83acf983444cbe83d1670fc588",
+  "shim_source": "scripts/hip57_shim.cpp, fixed contiguous 24 GiB cap",
+  "baseline_date": "2026-11-13 to 2026-11-17"
+}

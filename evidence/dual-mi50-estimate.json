@@ -1,0 +1,162 @@
+{
+  "kind": "offline estimate, not dual-GPU benchmark",
+  "trace_sha256": "3f70a51d7ec124154bbc223c81430f67980fa9db4ae5c363aef38bcffe379a00",
+  "profile_sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf",
+  "layer_windows": 21792,
+  "routed_entries": 1197600,
+  "actual_trace_vram_hit": 0.6694605878423514,
+  "static_single_8_07_gib": {
+    "cache_gib": [
+      8.07
+    ],
+    "slots": 4229,
+    "route_entry_hit": 0.23889696058784235,
+    "distinct_expert_hit": 0.24347129575752124
+  },
+  "dual_static_cache_sensitivity": [
+    {
+      "cache_gib": [
+        7.999,
+        7.999
+      ],
+      "slots": 8436,
+      "route_entry_hit": 0.45631012024048095,
+      "distinct_expert_hit": 0.47281066939079935,
+      "total_cache_gib": 16,
+      "split": 24,
+      "remaining_entry_miss_ratio": 0.7143446440306442,
+      "remaining_distinct_miss_ratio": 0.6968530442438157
+    },
+    {
+      "cache_gib": [
+        8.0,
+        8.0
+      ],
+      "slots": 8383,
+      "route_entry_hit": 0.4467351369405478,
+      "distinct_expert_hit": 0.4630798274393491,
+      "total_cache_gib": 16,
+      "split": 27,
+      "remaining_entry_miss_ratio": 0.7269250474768431,
+      "remaining_distinct_miss_ratio": 0.709715532999208
+    },
+    {
+      "cache_gib": [
+        9.0,
+        8.999
+      ],
+      "slots": 9494,
+      "route_entry_hit": 0.5232949231796927,
+      "distinct_expert_hit": 0.5366851000291664,
+      "total_cache_gib": 18,
+      "split": 24,
+      "remaining_entry_miss_ratio": 0.6263344805303802,
+      "remaining_distinct_miss_ratio": 0.6124221029190907
+    },
+    {
+      "cache_gib": [
+        9.0,
+        8.999
+      ],
+      "slots": 9427,
+      "route_entry_hit": 0.5122595190380762,
+      "distinct_expert_hit": 0.5242581792906904,
+      "total_cache_gib": 18,
+      "split": 27,
+      "remaining_entry_miss_ratio": 0.6408337054318335,
+      "remaining_distinct_miss_ratio": 0.6288483411685952
+    },
+    {
+      "cache_gib": [
+        9.999,
+        10.0
+      ],
+      "slots": 10547,
+      "route_entry_hit": 0.5793912825651303,
+      "distinct_expert_hit": 0.5929283797843428,
+      "total_cache_gib": 20,
+      "split": 24,
+      "remaining_entry_miss_ratio": 0.5526304529800976,
+      "remaining_distinct_miss_ratio": 0.5380782221915332
+    },
+    {
+      "cache_gib": [
+        10.0,
+        10.0
+      ],
+      "slots": 10482,
+      "route_entry_hit": 0.5762633600534403,
+      "distinct_expert_hit": 0.5834616316645602,
+      "total_cache_gib": 20,
+      "split": 27,
+      "remaining_entry_miss_ratio": 0.5567401757767716,
+      "remaining_distinct_miss_ratio": 0.5505916246132718
+    },
+    {
+      "cache_gib": [
+        10.999,
+        11.0
+      ],
+      "slots": 11603,
+      "route_entry_hit": 0.6325317301269205,
+      "distinct_expert_hit": 0.6419351983388207,
+      "total_cache_gib": 22,
+      "split": 24,
+      "remaining_entry_miss_ratio": 0.4828101463855613,
+      "remaining_distinct_miss_ratio": 0.4732996906174417
+    },
+    {
+      "cache_gib": [
+        10.999,
+        10.999
+      ],
+      "slots": 11529,
+      "route_entry_hit": 0.6323446893787575,
+      "distinct_expert_hit": 0.637126368898453,
+      "total_cache_gib": 22,
+      "split": 27,
+      "remaining_entry_miss_ratio": 0.48305589596016224,
+      "remaining_distinct_miss_ratio": 0.47965613078078345
+    }
+  ],
+  "decode_wall_time_sensitivity": [
+    {
+      "scenario": "conservative",
+      "cpu_pool_ms": 36,
+      "gpu_reach_ms": 32,
+      "other_ms": 12,
+      "handoff_ms": 4,
+      "window_ms": 84,
+      "assumed_committed_tokens_per_window": 4.6,
+      "decode_tps": 54.76190476190476
+    },
+    {
+      "scenario": "central",
+      "cpu_pool_ms": 27,
+      "gpu_reach_ms": 26,
+      "other_ms": 12,
+      "handoff_ms": 3,
+      "window_ms": 68,
+      "assumed_committed_tokens_per_window": 4.6,
+      "decode_tps": 67.6470588235294
+    },
+    {
+      "scenario": "optimistic",
+      "cpu_pool_ms": 19,
+      "gpu_reach_ms": 20,
+      "other_ms": 12,
+      "handoff_ms": 2,
+      "window_ms": 53,
+      "assumed_committed_tokens_per_window": 4.6,
+      "decode_tps": 86.79245283018868
+    }
+  ],
+  "calibration_warning": "Original static profile replay hits only 23.9%, whereas the saved adaptive run hits 66.9%. Static replay is NOT calibrated to the live adaptive tier; do not use its hit fractions to predict actual dual-GPU hit rates. Its slot counts are capacity sensitivity only.",
+  "limits": [
+    "Old separate-prompt routes, not a new user-workload trace.",
+    "Static ranking replay; adaptive swaps, routing drift and layer-dependent budgets are excluded.",
+    "Time coefficients are assumptions; weights and activations are not executed.",
+    "No division of single-request layer execution time by two.",
+    "DFlash2 plus pipeline-windows is unsupported in the current source."
+  ]
+}

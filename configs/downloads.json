@@ -1,0 +1,12 @@
+{
+  "runtime": {
+    "url": "https://github.com/limberalismer/strata-mi50-windows/releases/download/v1.0.0/strata-mi50-windows-runtime-v1.0.0.zip",
+    "size": 56146728,
+    "sha256": "b95f2661d1bdc667441b75c4530115f3e50ef48414075a50d19cd2ad431c04fe"
+  },
+  "draft": {
+    "url": "https://github.com/Niko1221/Strata/releases/download/v0.2.12/qwen3.8-flash-next-dflash2.strata1.q4_0-selq4.pack",
+    "size": 339694592,
+    "sha256": "4df2e5ab2b47c064afbe662e16e4f06569877125c2d0e2123a4ac755266c664c"
+  }
+}

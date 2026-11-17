@@ -1,0 +1,21 @@
+name: Validate deployment kit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  deployment:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependency-free deployment regression checks
+        run: python -m unittest discover -s tests -v
+      - name: Check PowerShell syntax
+        shell: pwsh
+        run: |
+          $taskTokens = $null
+          $taskErrors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'setup.ps1'), [ref]$taskTokens, [ref]$taskErrors) | Out-Null
+          if ($taskErrors.Count) { throw ($taskErrors | Out-String) }
