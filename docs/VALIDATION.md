@@ -20,6 +20,7 @@
 - PowerShell setup.ps1 语法检查通过。
 - 在全新的 `.venv` 中安装 requirements.txt 的固定依赖成功（Python 3.13.6），完整执行 setup.ps1 的已有模型/pack 复用分支成功；在该 venv 中重新执行 doctor、数值探针、四项部署测试和服务导入检查均通过。下载依赖时使用项目可写 TEMP 和本地 pip cache，避开原机器默认目录权限问题。
 - 两个 ABI 适配器从 scripts/ 的源码独立重建成功；未用新 DLL 覆盖已验证 runtime。
+- 从仅含 Git 提交文件的另一个全新 clone 目录再次准备本机配置、解压固定 Release ZIP；doctor 数值探针和全部四项部署测试通过。运行库不依赖作者原 rocm571 目录。
 - 留存两个原厂驱动安装包 Authenticode 均为 Valid、签名者 AMD；完整大小与 SHA 已记录。
 - 发布脚本、文档和 vendored 文本扫描未发现 token 或私钥；本机路径只允许存在于被忽略的 local/、build/。移除一个带机器固定路径的上游研究 runner，不包含用户提示/输出日志。
 

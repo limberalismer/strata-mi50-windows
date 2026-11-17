@@ -1,0 +1,50 @@
+{
+  "kind": "existing local log excerpts; not a new performance benchmark",
+  "p28": {
+    "date": "2026-11-13",
+    "prompt_tokens": 107,
+    "output_tokens": 512,
+    "decode_tps": [
+      40.3,
+      43.1,
+      41.8
+    ],
+    "median": 41.8,
+    "formal_timing_lines": [
+      "strata decode timing: 110 windows, avg T 5.63, 4.65 tokens/window, 115.39 ms/window = adapt wait 0.09 + verify 110.08 (GPU-reach wait 42.83 + per-layer host 61.26 [plan 0.33 actq 0.56 jobs 0.07 CPU 60.23] + stage 0.02) + commit/emit 0.06 + draft 5.04 + adapt join 0.00 + other 0.13; per layer-window: CPU experts 9.82 (13.30 entries), VRAM hits 36.69, PCIe 5.37; 18.3 swaps/window",
+      "strata decode timing: 110 windows, avg T 5.61, 4.65 tokens/window, 108.07 ms/window = adapt wait 0.07 + verify 102.81 (GPU-reach wait 41.61 + per-layer host 55.18 [plan 0.31 actq 0.59 jobs 0.13 CPU 54.07] + stage 0.02) + commit/emit 0.06 + draft 5.03 + adapt join 0.00 + other 0.11; per layer-window: CPU experts 8.83 (11.67 entries), VRAM hits 39.04, PCIe 4.67; 19.2 swaps/window",
+      "strata decode timing: 112 windows, avg T 5.62, 4.57 tokens/window, 109.39 ms/window = adapt wait 0.08 + verify 104.14 (GPU-reach wait 41.19 + per-layer host 56.83 [plan 0.32 actq 0.52 jobs 0.07 CPU 55.84] + stage 0.02) + commit/emit 0.06 + draft 5.02 + adapt join 0.00 + other 0.10; per layer-window: CPU experts 8.64 (11.56 entries), VRAM hits 39.34, PCIe 4.61; 18.9 swaps/window"
+    ]
+  },
+  "p26": {
+    "date": "2026-11-13",
+    "engine_sha256": "8f7a2cd8c05eb19b34f9d0cd5293a47dad4dcb3e096c6dddb0b9e36f51ac7b5b",
+    "requests": [
+      {
+        "prompt_tokens": 65479,
+        "generated_tokens": 46,
+        "prefill_tps": 470.1,
+        "decode_tps": 28.5,
+        "kv_overflow": false,
+        "retrieved_control_codes": 3
+      },
+      {
+        "prompt_tokens": 261847,
+        "generated_tokens": 49,
+        "prefill_tps": 415.0,
+        "decode_tps": 28.8,
+        "kv_overflow": false,
+        "retrieved_control_codes": 3
+      }
+    ]
+  },
+  "p29_same_preset_short_code_control": {
+    "date": "2026-11-16",
+    "decode_tps": [
+      39.4,
+      40.6,
+      38.3
+    ],
+    "median": 39.4
+  }
+}

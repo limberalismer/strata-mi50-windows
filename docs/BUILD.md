@@ -40,6 +40,8 @@ scripts\build-engine.bat
 
 核心配置：`STRATA_HIP_GFX906=ON`、`STRATA_ENABLE_HIP=OFF`、`STRATA_ENABLE_CUDA=OFF`、`CMAKE_HIP_ARCHITECTURES=gfx906`、`STRATA_PORTABLE=ON`、`STRATA_NATIVE_EXPERTS=ON`、`STRATA_MMQ_KQUANTS=ON`、HIP flags 中 `-mcode-object-version=4`。gfx906 是独立兼容后端，不能简单打开 wave32 的 STRATA_ENABLE_HIP。
 
+显式指定 `CMAKE_HIP_FLAGS_RELEASE=-O3 -DNDEBUG`，与原有成功构建一致。本次干净配置发现 CMake 的 HIP Release flags 默认为空，导致 GDN 的一个设备函数出现 LLVM `illegal VGPR to SGPR copy` 错误；不能依赖旧构建缓存替你保留优化参数。
+
 ## 重建 ABI 兼容库
 
 同样使用 VS x64 命令行与 TheRock clang++：
