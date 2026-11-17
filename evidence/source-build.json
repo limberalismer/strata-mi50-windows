@@ -1,0 +1,12 @@
+{
+  "status": "build passed",
+  "target": "strata",
+  "backend": "Windows HIP gfx906",
+  "hip_release_flags": "-O3 -DNDEBUG",
+  "code_object_version": 4,
+  "size": 42351104,
+  "sha256": "18549ab0864ede0ea2746cc17db84ff09631555fe11bd72ffbe43e4f02f1c930",
+  "adapters": "both source builds passed",
+  "deployed_runtime_replaced": false,
+  "new_binary_full_model_validation": "not run"
+}

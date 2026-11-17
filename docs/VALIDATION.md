@@ -21,6 +21,9 @@
 - 在全新的 `.venv` 中安装 requirements.txt 的固定依赖成功（Python 3.13.6），完整执行 setup.ps1 的已有模型/pack 复用分支成功；在该 venv 中重新执行 doctor、数值探针、四项部署测试和服务导入检查均通过。下载依赖时使用项目可写 TEMP 和本地 pip cache，避开原机器默认目录权限问题。
 - 两个 ABI 适配器从 scripts/ 的源码独立重建成功；未用新 DLL 覆盖已验证 runtime。
 - 从仅含 Git 提交文件的另一个全新 clone 目录再次准备本机配置、解压固定 Release ZIP；doctor 数值探针和全部四项部署测试通过。运行库不依赖作者原 rocm571 目录。
+- 仓库和 Release 发布后，从 GitHub 公网地址重新 clone，并通过 scripts/setup.py 的下载分支实际获取 Release 运行 ZIP，自动校验、解压和生成配置成功；再次执行 doctor 数值探针及四项测试全部通过。主模型仍复用已有标准文件，没有重新下载 83.6GB 权重。
+- GitHub Actions 的 Windows 无 GPU部署检查已成功执行；它验证部署脚本和 PowerShell 语法，不等于云端做过 MI50 推理。
+- 独立源码构建完成：`strata` 的 Windows HIP/gfx906 引擎与两个 ABI 适配器均成功生成。修正了干净配置下缺失的 HIP Release `-O3 -DNDEBUG`，新构建摘要见 `evidence/source-build.json`。发布运行包仍使用原有验收版本。
 - 留存两个原厂驱动安装包 Authenticode 均为 Valid、签名者 AMD；完整大小与 SHA 已记录。
 - 发布脚本、文档和 vendored 文本扫描未发现 token 或私钥；本机路径只允许存在于被忽略的 local/、build/。移除一个带机器固定路径的上游研究 runner，不包含用户提示/输出日志。
 
@@ -28,7 +31,7 @@
 
 - 全新 Windows 系统上的驱动安装、重启、下载整套 83.6GB GGUF 并从零打包：未重跑。本次验证复用了原机器已有模型数据。
 - 可移植目录第二次完整加载 41 GiB RAM arena 并重新跑 256K：未做，避免同时启动两个大内存模型或中断正在使用的生产服务。运行 EXE/DLL 与原验收组合相同；新运行库子集额外通过上述数值检查。
-- 新源码重建二进制的完整模型质量/性能验收：尚未进行，发布使用原有已验证 EXE。重建编译状态会在下面单独更新。
+- 新源码重建二进制的完整模型质量/性能验收：尚未进行，发布使用原有已验证 EXE。
 - Linux、双卡、其他 Windows 版本、其他 GPU/VBIOS、MTP 模式：本发布没有重新验收。
 
 ## 可执行复核

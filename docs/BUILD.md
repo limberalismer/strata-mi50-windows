@@ -4,7 +4,7 @@
 
 ## 来源
 
-- `vendor/strata/src`、`include`、`CMakeLists.txt` 等：实际生成 P28 引擎的本地 Strata-mi50-int6 源码快照，包含 MI50/GFX906 优化和 Windows 适配。
+- `vendor/strata/src`、`include`、`CMakeLists.txt` 等：用于 P28 及后续 MI50 工作的本地 Strata-mi50-int6 源码树当前快照，包含 MI50/GFX906 优化和 Windows 适配。缺少 Git 历史，无法证明每个文件都与原二进制构建时完全一致；本发布分别固定原已验证二进制哈希与当前源码摘要，不宣称逐字节可复现构建。
 - `vendor/strata/serve`、`strata_control`、`strata_cli`：生产运行中的 Strata-mi50 Python 服务源码快照。两棵本地树均无 `.git` 历史，不能伪造精确上游 commit；完整文件摘要在 `evidence/source-sha256.json`。
 - `vendor/strata/third_party/llama.cpp`：实际构建使用的本地 ggml、gguf-py 和 cmake 文件；上游基准 pin `3cf03257f219afbe7334045ff7c6a06ac68c627d`，保留本地版本，而不是构建时隐式切换最新版。
 - `scripts/hip57_shim.cpp`：对应固定 24 GiB 连续注册上限的 shim 源码。

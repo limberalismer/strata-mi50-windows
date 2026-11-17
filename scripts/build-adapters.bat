@@ -11,5 +11,5 @@ if not exist build\adapters mkdir build\adapters
   -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -D_CRT_SECURE_NO_DEPRECATE ^
   scripts\hip57_shim.cpp -o build\adapters\amdhip64_7.dll -ldxgi -lole32 -ld3d11 -ladvapi32
 if errorlevel 1 exit /b 1
-cl /nologo /O2 /EHsc /LD scripts\hipblas57_adapter.cpp /link /OUT:build\adapters\hipblas.dll
+cl /nologo /O2 /EHsc /LD /Fobuild\adapters\hipblas57_adapter.obj scripts\hipblas57_adapter.cpp /link /OUT:build\adapters\hipblas.dll /IMPLIB:build\adapters\hipblas57_adapter.lib
 exit /b %errorlevel%
